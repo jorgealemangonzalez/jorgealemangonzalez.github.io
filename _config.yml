@@ -1,0 +1,8 @@
+title: Jorgealemangonzalez.GitHub.io
+description: ONLINE
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-merlot
+
+gems:
+  - jekyll-mentions
