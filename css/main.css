@@ -4476,11 +4476,8 @@ a.button:hover,
 .pagination a:hover,
 .navigation a:hover,
 a.more-link:hover,
-.section-title h2 i {
-    background-color: #8ACB82;
-}
-
-.important-event:after {
+.section-title h2 i ,
+.important-event:after{
     background-color: #8ACB82;
 }
 
