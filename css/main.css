@@ -1,3 +1,16 @@
+/*
+    VARIABLES
+*/
+:root {
+  --text-size-little: 0.8em;
+  --text-size-medium: 0.92em;
+  --text-size-default: 1.1em;
+  --text-size-huge: 3em;
+
+  --icon-font-size-medium: 2.8em;
+  --icon-max-width-big: 1.3em;
+}
+
 /*  --------------------------------------------
 
 	1. BASE (@base) - base html elements
@@ -184,7 +197,7 @@ blockquote p {
 
 blockquote cite {
     display: block;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     padding-right: 1em;
     margin-top: 1em;
     font-style: normal;
@@ -211,7 +224,7 @@ table {
 
 tr th {
     padding: .8em 1em;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     font-weight: bold;
     border-bottom: 2px solid #DDE4E6;
     text-transform: uppercase;
@@ -237,7 +250,7 @@ pre {
     padding: 0 3px 2px;
     margin-bottom: 4em;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     color: #333333;
     white-space: pre;
     overflow: auto;
@@ -264,7 +277,7 @@ ul {
 
 dt {
     margin-bottom: .4em;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     font-weight: bold;
 }
 
@@ -292,7 +305,7 @@ form p {
 
 label {
     display: block;
-    font-size: 11px;
+    font-size: var(--text-size-little);
     margin-bottom: .2em;
     font-weight: bold;
     color: rgba(28, 38, 43, 0.7);
@@ -307,7 +320,7 @@ select,
     padding: .7em .8em;
     width: 100%;
     max-width: 100%;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     color: #6A7686;
     border: 2px solid rgba(28, 38, 43, 0.15);
     border-radius: 0;
@@ -355,7 +368,7 @@ div.radio.disabled {
 }
 
 div.selector {
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     padding: .4em;
     width: 100% !important;
     line-height: 46px;
@@ -473,7 +486,7 @@ div.uploader span.action {
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     height: 100%;
 }
 
@@ -602,7 +615,7 @@ textarea,
     clip: auto;
     color: #21759b;
     display: block;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     font-weight: bold;
     height: auto;
     line-height: normal;
@@ -819,7 +832,7 @@ html {
     margin: 0;
     padding: 0;
     font-weight: bold;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     letter-spacing: 0;
     color: #FFF;
 }
@@ -1049,7 +1062,7 @@ body {
 }
 
 .header .social li a {
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     height: auto;
     border: 0;
     line-height: 22px;
@@ -1066,7 +1079,7 @@ body {
 }
 
 .copy-text p {
-    font-size: 12px;
+    font-size: var(--text-size-default);
 }
 
 /* PAGE : HOME */
@@ -1254,7 +1267,7 @@ body {
 
 .section-title h2 {
     margin: 0;
-    font-size: 11px;
+    font-size: var(--text-size-little);
     text-transform: uppercase;
     position: relative;
     display: inline-block;
@@ -1354,7 +1367,7 @@ body {
 .service p {
     margin-top: .2em;
     margin-left: 68px;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     line-height: 1.45;
     color: rgba(28, 38, 43, 0.5);
 }
@@ -1363,7 +1376,7 @@ body {
     margin-top: 0;
     margin-left: 68px;
     margin-bottom: .3em;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     text-transform: uppercase;
 }
 
@@ -1420,7 +1433,7 @@ body {
     display: inline-block;
     margin-bottom: 12px;
     line-height: 1;
-    font-size: 38px;
+    font-size: var(--icon-font-size-medium);
 }
 
 .fun-fact i:before {
@@ -1435,18 +1448,33 @@ body {
 }
 
 .fun-fact h4 {
-    max-width: 140px;
+    max-width: 640px;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     line-height: 1.2;
     font-weight: 400;
     text-transform: uppercase;
 }
 
-/* CLIENT */
+/* COMPANY */
 .company {
     margin: 1em 0;
     text-align: center;
+    cursor: alias !important;
+}
+
+.company-more{
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    cursor: help;
+}
+
+.company:hover{
+    background-color: grey;
+}
+
+.company:hover .company-more{
+    opacity: 1;
 }
 
 .company img {
@@ -1525,8 +1553,8 @@ body {
 .event h3 {
     display: inline-block;
     position: relative;
-    padding: 3px 8px;
-    font-size: 11px;
+    padding: 2px 8px;
+    font-size: var(--text-size-little);
     line-height: 1.3;
     font-weight: 400;
     letter-spacing: 0;
@@ -1557,7 +1585,7 @@ body {
 }
 
 .event h4 {
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     font-weight: 700;
     text-transform: uppercase;
     margin: 0 0 .2em 0;
@@ -1567,7 +1595,7 @@ body {
 .event h5 {
     margin: 0;
     padding: 0 0 .3em 0;
-    font-size: 11px;
+    font-size: var(--text-size-little);
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -1576,7 +1604,7 @@ body {
 
 .event p {
     margin: .6em 0 .2em 0;
-    font-size: 15px;
+    font-size: var(--text-size-default);
 }
 
 .event p:last-child {
@@ -1592,7 +1620,7 @@ body {
 .skill-unit h4 {
     margin: 0 0 4px 0;
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     position: relative;
     z-index: 100;
     padding-left: 0px;
@@ -1653,13 +1681,13 @@ body {
     position: relative;
     text-align: center;
     margin: 0;
-    font-size: 15px;
+    font-size: var(--text-size-default);
     font-weight: 400;
 }
 
 .testo h5 {
     margin-top: 0;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     font-weight: 400;
     text-align: center;
     color: rgba(28, 38, 43, 0.35);
@@ -1669,7 +1697,7 @@ body {
 .testo p {
     position: relative;
     margin: 1em 0 0.2em 0;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
 }
 
 /* SOCIAL */
@@ -1691,7 +1719,7 @@ body {
     float: left;
     margin: 0 .4em .3em 0;
     text-align: center;
-    font-size: 15px;
+    font-size: var(--text-size-default);
     font-family: "fontello";
     width: 52px;
     line-height: 50px;
@@ -2045,7 +2073,7 @@ body {
     padding: .4em 0;
     color: #345;
     opacity: .3;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     font-weight: 700;
 }
 
@@ -2110,7 +2138,7 @@ body {
     text-align: center;
     font-style: italic;
     color: #ccc;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     line-height: 1;
     border-radius: 102px;
     position: absolute;
@@ -2256,7 +2284,7 @@ a.button {
     position: relative;
     padding: 1.1em 2em;
     margin-bottom: .25em;
-    font-size: 11px;
+    font-size: var(--text-size-little);
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.2;
@@ -2289,7 +2317,7 @@ input[type=submit].big,
 input[type=button].big,
 button.big,
 a.button.big {
-    font-size: 12px;
+    font-size: var(--text-size-default);
     padding: 1.5em 2.6em;
 }
 
@@ -2299,7 +2327,7 @@ input[type=button].small,
 button.small,
 a.button.small {
     padding: .6em 1.4em;
-    font-size: 11px;
+    font-size: var(--text-size-little);
 }
 
 /* Buttons with icons */
@@ -2359,7 +2387,7 @@ a.button.big i {
 
 .tabs .tab-content {
     margin-top: -1px;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     border: 1px solid #EAEEEF;
 }
 
@@ -2394,7 +2422,7 @@ a.button.big i {
     position: absolute;
     top: 1em;
     left: 0;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     line-height: 1;
 }
 
@@ -2405,7 +2433,7 @@ a.button.big i {
 .toggle .toggle-content {
     display: none;
     padding: 1.2em 0 2em 1.8em;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     border-bottom: 1px solid #eee;
 }
 
@@ -2413,7 +2441,7 @@ a.button.big i {
 .alert {
     position: relative;
     padding: 1.2em 2em;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     line-height: 1.4;
     margin-bottom: 2em;
     border: 3px solid #EAEEEF;
@@ -2902,6 +2930,12 @@ a.button.big i {
     }
 }
 
+.contact-button{
+    color: white;
+}
+.contact-button:hover i, .contact-button:hover h4{
+    color: lightgreen;
+}
 /* CONTACT FORM */
 .contact-form,
 .nf-form-cont {
@@ -2925,7 +2959,7 @@ a.button.big i {
     width: 100%;
     max-width: none;
     display: block;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
 }
 
 .contact-form textarea {
@@ -3006,7 +3040,7 @@ button.mfp-arrow-right:before {
     width: 100%;
     line-height: 38px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     padding-right: 0;
     text-align: center;
     font-weight: bold;
@@ -3152,7 +3186,7 @@ button.mfp-arrow-right:before {
 .entry-meta {
     color: #DCDFE2;
     font-weight: 700;
-    font-size: 12px;
+    font-size: var(--text-size-default);
     margin-top: 1em;
     text-align: center;
     text-transform: uppercase;
@@ -3227,7 +3261,7 @@ a.more-link {
     color: #6A7686;
     font-weight: 400;
     letter-spacing: 2px;
-    font-size: 11px;
+    font-size: var(--text-size-little);
     line-height: 1;
     background: none;
     border: 1px solid #DDE4E6;
@@ -3565,7 +3599,7 @@ a.more-link:hover {
     text-align: right;
     width: 100px;
     margin-top: 5px;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     text-transform: uppercase;
 }
 
@@ -3639,7 +3673,7 @@ a.more-link:hover {
 .navigation,
 .post-pagination {
     padding: 3em 0;
-    font-size: 11px;
+    font-size: var(--text-size-little);
     letter-spacing: 2px;
     overflow: auto;
 }
@@ -3720,13 +3754,13 @@ a.more-link:hover {
 }
 
 .nav-single h6 {
-    font-size: 11px;
+    font-size: var(--text-size-little);
     letter-spacing: 1px;
     color: #DCDFE2;
 }
 
 .nav-single h5 {
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: -.03em;
@@ -3884,7 +3918,7 @@ a.more-link:hover {
 
 .comment-meta .comment-date {
     display: block;
-    font-size: 11px;
+    font-size: var(--text-size-little);
     font-weight: 400;
     color: #C5CAD0;
 }
@@ -3902,7 +3936,7 @@ a.more-link:hover {
 .comment .reply {
     text-align: right;
     font-weight: 700;
-    font-size: 11px;
+    font-size: var(--text-size-little);
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -3975,7 +4009,7 @@ a.more-link:hover {
 
 .widget-title {
     margin-bottom: 1.6em;
-    font-size: 11px;
+    font-size: var(--text-size-little);
     text-transform: uppercase;
     letter-spacing: 0;
     font-weight: 700;
@@ -4021,7 +4055,7 @@ a.more-link:hover {
 .widget_recent_entries ul li {
     margin: 0;
     padding: 1em 0 .5em 0;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     border-bottom: 1px solid rgba(28, 38, 43, 0.05);
 }
 
@@ -4117,7 +4151,7 @@ a.more-link:hover {
 .widget_archive li a {
     padding: 7px 0;
     margin: 0px;
-    font-size: 14px;
+    font-size: var(--text-size-medium);
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(28, 38, 43, 0.05);
@@ -4131,7 +4165,7 @@ a.more-link:hover {
 /* search widget */
 .widget_search .search-submit {
     margin-top: 12px;
-    font-size: 11px;
+    font-size: var(--text-size-little);
 }
 
 /* calendar widget */

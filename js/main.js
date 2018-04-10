@@ -3,6 +3,22 @@ var classicLayout = false;
 var portfolioKeyword;
 var mapCanvas;
 
+// ------------------------------
+// AJAX LOADER
+function showLoader() {
+	NProgress.start();
+}
+function hideLoader() {
+	NProgress.done();
+}
+// ------------------------------
+
+
+// ------------------------------
+// start loader
+showLoader();
+// ------------------------------
+
 var includes = $('[html-include]');
 // TODO LOADER OUTSIDE
 var loaders = [];
@@ -24,20 +40,15 @@ jQuery.each(includes, function () {
 
 $.when.apply( null, myPromises ).done( function() {
     initAll(jQuery);
+    console.log("InitAll");
 });
 
 
-var initAll = (function($) { "use strict";
+var initAll = function($) { "use strict";
 
 
 	/* DOCUMENT LOAD */
 	$(function() {
-
-		// ------------------------------
-		// start loader
-		showLoader();
-		// ------------------------------
-
 
 		// ------------------------------
 		// HOME TEXT TYPE EFFECT
@@ -299,18 +310,6 @@ var initAll = (function($) { "use strict";
 
 
 
-	// WINDOW ONLOAD
-	window.onload = function() {
-
-		hideLoader();
-
-	};
-	// WINDOW ONLOAD
-
-
-
-
-
 	// ------------------------------
 	// ------------------------------
 		// FUNCTIONS
@@ -351,7 +350,7 @@ var initAll = (function($) { "use strict";
 		});
 		// ------------------------------
 
-
+		hideLoader();
 		// ------------------------------
 		// TOGGLES
 		var toggleSpeed = 300;
@@ -714,22 +713,6 @@ var initAll = (function($) { "use strict";
 		return detailUrl;
 	}
 	// ------------------------------
-
-
-
-	// ------------------------------
-	// AJAX LOADER
-	function showLoader() {
-		NProgress.start();
-	}
-	function hideLoader() {
-		NProgress.done();
-	}
-	// ------------------------------
-
-
-
-
 
 	// ------------------------------
 	// CHANGE PAGE
@@ -1217,4 +1200,4 @@ var initAll = (function($) { "use strict";
 
 
 
-});
+};

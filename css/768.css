@@ -4,7 +4,7 @@
 
     /* TYPOGRAPHY */
 	h1 { 
-		font-size: 3em; letter-spacing: -4px;
+		font-size: var(--text-size-huge); letter-spacing: -4px;
 		}
     h2 {
         font-size: 2em;
@@ -289,7 +289,7 @@
     	}
     .service i,
 	.service img { 
-        float: none; width: auto; max-width: 84px; line-height: 1; font-size: 64px; margin-bottom: 18px;
+        float: none; width: auto; max-width: var(--icon-max-width-big); line-height: 1; font-size: 64px; margin-bottom: 18px;
     	}
     .service p {
         margin-left: 0;
@@ -340,10 +340,10 @@
 		width: 108px; height: 108px; padding: 20px 10px;
 		}
 	.process i { 
-		font-size: 48px;
+		font-size: var(--text-size-huge);
 		}
 	.process h4 { 
-		font-size: 11px; margin-top: 5px;
+		font-size: var(--text-size-little); margin-top: 5px;
 		}
     
     /* FUN FACT */
@@ -357,7 +357,7 @@
 		float: left; max-width: 66px;
 		}
 	.fun-fact h4 {
-		margin-left: 82px; padding-top: 16px; max-width: 160px; font-size: 14px;
+		margin-left: 82px; padding-top: 16px; max-width: 160px; font-size: var(--text-size-medium);
 		}	
 	
 	/* CLIENT */

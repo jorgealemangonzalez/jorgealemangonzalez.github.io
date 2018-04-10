@@ -19,7 +19,7 @@
   font-size: 2em;
 }
 .pe-3x {
-  font-size: 3em;
+  font-size: var(--text-size-huge);
 }
 .pe-4x {
   font-size: 4em;

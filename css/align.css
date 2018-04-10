@@ -10,7 +10,7 @@
 	border: 0 none; height: auto; margin: 0; padding: 0;
 	}
 .wp-caption-text {
-    font-size: 14px; margin: 0; padding: .6em .1em 0; color: #C0C0C0;
+    font-size: var(--text-size-medium); margin: 0; padding: .6em .1em 0; color: #C0C0C0;
 	}
 .wp-caption.aligncenter { 
 	text-align: center; 
