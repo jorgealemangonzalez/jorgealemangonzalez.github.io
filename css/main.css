@@ -1462,7 +1462,7 @@ body {
     text-align: center;
     cursor: alias !important;
 }
-
+/*
 .company-more{
     opacity: 0;
     -webkit-transition: opacity 0.5s;
@@ -1475,7 +1475,7 @@ body {
 
 .company:hover .company-more{
     opacity: 1;
-}
+}*/
 
 .company img {
     margin: 0 auto;
