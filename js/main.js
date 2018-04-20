@@ -408,8 +408,8 @@ var initAll = function($) { "use strict";
 	// ------------------------------
 	// MAP
 	function initializeMap() {
-			var latitude = mapCanvas.data("latitude");
-			var longitude = mapCanvas.data("longitude");
+			var latitude = 41.390205;
+			var longitude = 2.154007;
 			var zoom = mapCanvas.data("zoom");
 			var marker_image = mapCanvas.data("marker-image");
 
@@ -441,13 +441,10 @@ var initAll = function($) { "use strict";
 			var map = new google.maps.Map(mapElement, mapOptions);
 
 			//CREATE A CUSTOM PIN ICON
-			var marker_image = marker_image;
-			var pinIcon = new google.maps.MarkerImage(marker_image,null,null, null,new google.maps.Size(120, 90));
 
 			var marker = new google.maps.Marker({
 			   position: new google.maps.LatLng(latitude,longitude),
 			  map: map,
-			  icon: pinIcon,
 			  title: 'Hey, I am here'
 			});
 		}
