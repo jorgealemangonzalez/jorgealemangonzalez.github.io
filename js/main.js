@@ -23,6 +23,12 @@ var includes = $('[html-include]');
 // TODO LOADER OUTSIDE
 var loaders = [];
 var myPromises = [ ];
+var startPath = "#/home";
+if(window.location.hash){
+	console.log(window.location.hash);
+	startPath = window.location.hash;
+	window.location.hash = "";
+}
 
 function createPromise( baseInfoTemplate, loaderDiv ) {
     return $.Deferred(function( promise ) {
@@ -40,8 +46,10 @@ jQuery.each(includes, function () {
 
 $.when.apply( null, myPromises ).done( function() {
     initAll(jQuery);
-    if(window.location.href.endsWith("index.html") || window.location.href.endsWith(".github.io/") ) {
-		window.location.replace("#/home");
+    if(window.location.href.endsWith("index.html#")
+		|| window.location.href.endsWith(".github.io/")
+		|| window.location.href.endsWith(".github.io/#")) {
+		window.location.replace(startPath);
 	}
 });
 
@@ -720,6 +728,7 @@ var initAll = function($) { "use strict";
 		var path = $.address.path();
 		path = path.slice(1, path.length);
 		path = giveDetailUrl() != -1 ? portfolioKeyword : path;
+		console.log(path)
 
 
 		if(path == "") {  // if hash tag doesnt exists - go to first page
