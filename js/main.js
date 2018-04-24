@@ -40,6 +40,9 @@ jQuery.each(includes, function () {
 
 $.when.apply( null, myPromises ).done( function() {
     initAll(jQuery);
+    if(window.location.href.endsWith("index.html") || window.location.href.endsWith(".github.io/") ) {
+		window.location.replace("#/home");
+	}
 });
 
 
