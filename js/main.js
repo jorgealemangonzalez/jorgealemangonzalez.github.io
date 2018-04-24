@@ -40,7 +40,6 @@ jQuery.each(includes, function () {
 
 $.when.apply( null, myPromises ).done( function() {
     initAll(jQuery);
-    console.log("InitAll");
 });
 
 
