@@ -2123,6 +2123,9 @@ body {
     color: #345;
     line-height: 1.4;
 }
+.media-cell-desc h3:hover{
+    text-decoration: underline;
+}
 
 .media-cell-desc h3 a {
     color: inherit;
