@@ -24,11 +24,6 @@ var includes = $('[html-include]');
 var loaders = [];
 var myPromises = [ ];
 var startPath = "#/home";
-if(window.location.hash){
-	console.log(window.location.hash);
-} else {
-	window.location.hash = startPath
-}
 
 function createPromise( baseInfoTemplate, loaderDiv ) {
     return $.Deferred(function( promise ) {
@@ -47,8 +42,8 @@ jQuery.each(includes, function () {
 $.when.apply( null, myPromises ).done( function() {
     initAll(jQuery);
     if(window.location.href.endsWith("index.html#")
-		|| window.location.href.endsWith(".github.io/")
-		|| window.location.href.endsWith(".github.io/#")) {
+		|| window.location.href.endsWith(".com/")
+		|| window.location.href.endsWith(".com/#")) {
 		window.location.replace(startPath);
 	}
 });
