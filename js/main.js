@@ -26,8 +26,8 @@ var myPromises = [ ];
 var startPath = "#/home";
 if(window.location.hash){
 	console.log(window.location.hash);
-	startPath = window.location.hash;
-	window.location.hash = "";
+} else {
+	window.location.hash = startPath
 }
 
 function createPromise( baseInfoTemplate, loaderDiv ) {
